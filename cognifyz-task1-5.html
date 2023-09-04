@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p{
+        margin:300px 200px 300px 300px;
+	    font-weight:bold;
+        font-size:54px;
+      }
+    </style>
+
+  </head>
+  <body style="background-color: aquamarine;">
+    <h3 style="text-align: center;text-decoration: underline;">Greeting Message according to current time</h3>
+    <p id="greet"></p>
+    <script>
+      let GreetingMassage =document.getElementById("greet");
+      let CurrentTime = new Date().getHours();
+      let Minutes = new Date().getMinutes();
+      let time = CurrentTime-12;
+      if(CurrentTime<12){
+        GreetingMassage.textContent = "Hello time is "+CurrentTime+":"+Minutes+" ,"+"so you need to wake up";
+      }
+      else if(CurrentTime<16){
+        GreetingMassage.textContent = "Hello,Good Afternoon now the time is "+time+":"+Minutes;
+      }
+      else if(CurrentTime<21){
+        GreetingMassage.textContent = "Hello,Good evening now the time is "+time+":"+Minutes;
+      }
+      else{
+        GreetingMassage.textContent  = "Hello time is "+time+":"+Minutes+", "+"so you need to sleep";
+      }
+    </script>
+  </body>
+</html>

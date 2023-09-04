@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-color: aquamarine;
+}
+        div{
+            border:2px solid ;
+            box-shadow:2px 2px 5px rgb(0,0,0,1);
+            margin:0px 400px 0px 400px;
+            padding: 20px;
+            background-color: white;
+        }
+      h1{
+        text-align: center;
+        font-weight: bold;
+      }
+      div{
+        text-align: center;
+      }
+      button{
+        margin-left:20px;
+	    margin-top:10px;
+      }
+      p{
+        text-align: center;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <h2 style="text-align: center;text-decoration: underline;">A Simple Calculator to add two numbers</h2>
+    <div>
+        <h1>Want to Add two numbers</h1>
+        <input style="border-radius:5px;" id="number1"/>
+        <input style="border-radius:5px;" id="number2"/><br/>
+        <button id="add">ADD</button>
+        <p id="display"></p>
+    </div>
+    <script>
+      let number1 = document.getElementById("number1");
+      let number2 = document.getElementById("number2");
+      let button = document.getElementById("add");
+      let dispaly = document.getElementById("display");
+      button.onclick=function(){
+        let value1 = number1.value;
+        let value2 = number2.value;
+        if(value1 === "" || value2 === ""){
+           display.textContent="Please Enter The Values";
+
+        }
+        else{
+           let add = parseInt(value1)+parseInt(value2);
+           dispaly.textContent ="Sum of your two numbers is"+" "+ add;
+           number1.value="";
+           number2.value="";
+	}
+}
+    </script>
+  </body>
+</html>

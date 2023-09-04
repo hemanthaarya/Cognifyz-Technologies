@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .bc-Color{
+        background-color: rgb(26, 115, 232);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+        <h4 style="text-align: center;">Simple Event Handling</h4>
+      <button style="margin:300px 700px;border-radius:5px;cursor:pointer; " id="button">Click me to Change color</button>  
+      <script>
+        let Button = document.getElementById("button");
+        Button.onclick=function(){
+            document.body.classList.toggle("bc-Color");
+        }
+      </script>  
+    </div>
+  </body>
+</html>
